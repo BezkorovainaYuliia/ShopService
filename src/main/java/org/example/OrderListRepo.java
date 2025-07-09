@@ -9,49 +9,20 @@ import java.util.List;
  * Entfernen und Abrufen von Bestellungen (einzelne Bestellung und alle Bestellungen).
  */
 
-public class OrderListRepo {
+public class OrderListRepo implements OrderRepo{
     private List<Order> orders = new ArrayList<>();
 
 
-    public void addOrder(Order newOrder) {
+    public void addOrder(int id, Order newOrder) {
+        /// ?????? id
         orders.add(newOrder);
     }
-    public void addOrders(List<Order> newOrders) {
-        orders.addAll(newOrders);
-    }
-
-    public List<Order> getOrders() {
+    public List<Order> getAll() {
         return orders;
     }
-
-    public Order getOrderById(int id) {
-        for (Order order : orders) {
-            if (order.id() == id) {
-                return order;
-            }
-        }
-        return null;
-    }
-
-    public void removeOrderById(int id) {
-        for (Order order : orders) {
-            if (order.id() == id) {
-                orders.remove(order);
-            }
-        }
-    }
-
-
-    public void removeProductFromOrder(Order order, Product product) {
-
-        for (Order order1 : orders) {
-            if (order1.equals(order)) {
-                order1.products().remove(product);
-            }
-        }
-    }
-
-    public void removeOrders(Order order) {
+    public void removeOrder(Order order) {
         orders.remove(order);
     }
+
+
 }

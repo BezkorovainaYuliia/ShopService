@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ProductRepo {
     private List<Product> products;
@@ -11,7 +10,6 @@ public class ProductRepo {
     public ProductRepo() {
         products = new ArrayList<>();
     }
-
 
     public void addProduct(Product product) {
         products.add(product);
@@ -38,14 +36,13 @@ public class ProductRepo {
         return findedProduct;
      }
 
-    public List<Product> findProductByName(String nameProduct) {
-        List<Product> findProducts = new ArrayList<>();
+    public Product findProductByName(String nameProduct) {
         for (Product product : products) {
             if (product.nameProduct().equals(nameProduct)){
-                findProducts.add(product);
+                return product;
             }
         }
-        return findProducts;
+        return null;
     }
 
      public List<Product> getProducts() {
