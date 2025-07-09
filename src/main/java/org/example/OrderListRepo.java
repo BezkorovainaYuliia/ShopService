@@ -16,13 +16,29 @@ public class OrderListRepo {
     public void addOrder(Order newOrder) {
         orders.add(newOrder);
     }
+    public void addOrders(List<Order> newOrders) {
+        orders.addAll(newOrders);
+    }
 
     public List<Order> getOrders() {
         return orders;
     }
 
-    public int getOrderCount() {
-        return orders.size();
+    public Order getOrderById(int id) {
+        for (Order order : orders) {
+            if (order.id() == id) {
+                return order;
+            }
+        }
+        return null;
+    }
+
+    public void removeOrderById(int id) {
+        for (Order order : orders) {
+            if (order.id() == id) {
+                orders.remove(order);
+            }
+        }
     }
 
 
