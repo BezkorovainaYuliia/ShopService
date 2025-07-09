@@ -78,7 +78,7 @@ public class ShopService {
         }
         System.out.println(">-------------------------------------------------<");
 
-        System.out.println("OREDER MAP REPO");
+        System.out.println("ORDER MAP REPO");
         System.out.println(">-------------------------------------------------<");
         OrderMapRepo orderMapRepo = new OrderMapRepo();
         orderMapRepo.addOrder(16, order1);
