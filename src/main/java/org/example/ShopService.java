@@ -10,19 +10,19 @@ public class ShopService {
 
     public static void main(String[] args) {
         //Products
-        Product product1 = new Product(1, "Phone", 123);
-        Product product2 = new Product(2, "Pen", 43);
-        Product product3 = new Product(3, "Tablet", 199);
-        Product product4 = new Product(4, "Smart-Watch", 99);
-        Product product5 = new Product(5, "Hear phone", 19);
-        Product product6 = new Product(6, "Mp3_player", 34);
+        Product product1 = new Product(1, "Phone", 2,123);
+        Product product2 = new Product(2, "Pen", 3,43);
+        Product product3 = new Product(3, "Tablet", 1,199);
+        Product product4 = new Product(4, "Smart-Watch", 4,99);
+        Product product5 = new Product(5, "Hear phone", 2,19);
+        Product product6 = new Product(6, "Mp3_player", 3,34);
 
         //Orders
-        Order order1 = new Order(10, new ArrayList<>(Arrays.asList(product1, product2, product4)));
-        Order order2 = new Order(11, new ArrayList<>(Arrays.asList(product6, product6, product5)));
-        Order order3 = new Order(12, new ArrayList<>(Arrays.asList(product3, product1, product4)));
-        Order order4 = new Order(13, new ArrayList<>(Arrays.asList(product1, product2, product5)));
-        Order order5 = new Order(14, new ArrayList<>(Arrays.asList(product1, product3, product5)));
+        Order order1 = new Order(10, new ArrayList<>(Arrays.asList(product1, product2, product4)), 0);
+        Order order2 = new Order(11, new ArrayList<>(Arrays.asList(product6, product6, product5)), 0);
+        Order order3 = new Order(12, new ArrayList<>(Arrays.asList(product3, product1, product4)), 0);
+        Order order4 = new Order(13, new ArrayList<>(Arrays.asList(product1, product2, product5)), 0);
+        Order order5 = new Order(14, new ArrayList<>(Arrays.asList(product1, product3, product5)), 0);
 
         //OrderRepo
         System.out.println(">-------------------------------------------------<");
