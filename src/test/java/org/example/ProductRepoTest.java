@@ -15,15 +15,15 @@ class ProductRepoTest {
     void findById() {
         List<Product> products = new ArrayList<>();
         ProductRepo productRepo = new ProductRepo();
-        Product product1 = new Product(4, "LuiViton", "Bag from new colection", new BigDecimal(223.45));
-        Product product2 = new Product(5, "Apple MacBook", "Laptop", new BigDecimal(565.89));
-        Product product3 = new Product(6, "Oskar", "Golden Figure", new BigDecimal(16.45));
+        Product product1 = new Product(4, "LuiViton", 223);
+        Product product2 = new Product(5, "Apple MacBook", 565);
+        Product product3 = new Product(6, "Oskar", 16);
         products.add(product1);
         products.add(product2);
         products.add(product3);
         productRepo.addProducts(products);
         Product actual = productRepo.findProductById(5);
-        Product expected = new Product(5, "Apple MacBook", "Laptop", new BigDecimal(565.89));
+        Product expected = new Product(5, "Apple MacBook", 565);
         assertEquals(expected, actual);
     }
 
@@ -31,17 +31,17 @@ class ProductRepoTest {
     void addProducts() {
         List<Product> products = new ArrayList<>();
         ProductRepo productRepo = new ProductRepo();
-        Product product1 = new Product(1, "Katana", "Weapon from Japan", new BigDecimal(23.45));
-        Product product2 = new Product(2, "Tifani", "Jewels", new BigDecimal(345.67));
-        Product product3 = new Product(3, "Bikini", "Victoria Secret BH", new BigDecimal(76.45));
+        Product product1 = new Product(1, "Katana", 23);
+        Product product2 = new Product(2, "Tifani", 345);
+        Product product3 = new Product(3, "Bikini", 76);
 
         products.add(product1);
         products.add(product2);
         products.add(product3);
         productRepo = new ProductRepo();
-        product1 = new Product(4, "LuiViton", "Bag from new colection", new BigDecimal(223.45));
-        product2 = new Product(5, "Apple MacBook", "Laptop", new BigDecimal(565.89));
-        product3 = new Product(6, "Oskar", "Golden Figure", new BigDecimal(16.45));
+        product1 = new Product(4, "LuiViton", 223);
+        product2 = new Product(5, "Apple MacBook", 565);
+        product3 = new Product(6, "Oskar", 16);
         products.add(product1);
         products.add(product2);
         products.add(product3);
@@ -58,17 +58,17 @@ class ProductRepoTest {
     void removeProducts() {
         List<Product> products = new ArrayList<>();
         ProductRepo productRepo = new ProductRepo();
-        Product product1 = new Product(1, "Katana", "Weapon from Japan", new BigDecimal(23.45));
-        Product product2 = new Product(2, "Tifani", "Jewels", new BigDecimal(345.67));
-        Product product3 = new Product(3, "Bikini", "Victoria Secret BH", new BigDecimal(76.45));
+        Product product1 = new Product(1, "Katana", 23);
+        Product product2 = new Product(2, "Tifani", 345);
+        Product product3 = new Product(3, "Bikini", 76);
 
         products.add(product1);
         products.add(product2);
         products.add(product3);
         productRepo = new ProductRepo();
-        product1 = new Product(4, "LuiViton", "Bag from new colection", new BigDecimal(223.45));
-        product2 = new Product(5, "Apple MacBook", "Laptop", new BigDecimal(565.89));
-        product3 = new Product(6, "Oskar", "Golden Figure", new BigDecimal(16.45));
+        product1 = new Product(4, "LuiViton", 223);
+        product2 = new Product(5, "Apple MacBook", 565);
+        product3 = new Product(6, "Oskar", 16);
         products.add(product1);
         products.add(product2);
         products.add(product3);
@@ -84,16 +84,16 @@ class ProductRepoTest {
     void addProduct_IsTrue() {
         List<Product> products = new ArrayList<>();
         ProductRepo productRepo = new ProductRepo();
-        Product product1 = new Product(1, "Katana", "Weapon from Japan", new BigDecimal(23.45));
-        Product product2 = new Product(2, "Tifani", "Jewels", new BigDecimal(345.67));
-        Product product3 = new Product(3, "Bikini", "Victoria Secret BH", new BigDecimal(76.45));
+        Product product1 = new Product(1, "Katana", 23);
+        Product product2 = new Product(2, "Tifani", 345);
+        Product product3 = new Product(3, "Bikini", 76);
 
         products.add(product1);
         products.add(product2);
         products.add(product3);
         productRepo = new ProductRepo();
         productRepo.addProducts(products);
-        product1 = new Product(4, "LuiViton", "Bag from new colection", new BigDecimal(223.45));
+        product1 = new Product(4, "LuiViton", 223);
         productRepo.addProduct(product1);
         Product actual = productRepo.findProductById(4);
         assertEquals(product1, actual);

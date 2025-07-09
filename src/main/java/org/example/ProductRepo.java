@@ -46,7 +46,6 @@ public class ProductRepo {
             }
         }
         return findProducts;
-        //return findProducts.stream().filter(product -> product.nameProduct().equals(nameProduct)).collect(Collectors.toList());
     }
 
      public List<Product> getProducts() {
@@ -55,8 +54,7 @@ public class ProductRepo {
 
     @Override
     public String toString() {
-        return "ProductRepo{" +
-                "products=" + products +
-                '}';
+        return "ProductRepo has " +
+                "products " + products;
     }
 }
